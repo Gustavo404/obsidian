@@ -1,52 +1,36 @@
 # Obsidian
-## Descrição
-O script Obsidian é uma ferramenta de linha de comando que permite filtrar linhas de um arquivo de entrada com base em valores de dBm (decibéis miliwatt) especificados pelo usuário. Ele oferece a capacidade de filtrar valores maiores ou iguais a um limite máximo e menores ou iguais a um limite mínimo. Além disso, o script pode opcionalmente extrair linhas com um valor específico de -40 dBm.
 
-## Uso
-Para usar o script Obsidian, siga estas etapas:
+## Visão Geral
 
-1. Execute o script no terminal usando o comando `./obsidian.sh`.
+O script Obsidian é uma ferramenta versátil projetada para processar dados de análise de potência de sinal em dBm. Ele oferece duas funcionalidades principais:
 
-2. O script solicitará as seguintes informações ao usuário:
-   - Limite máximo de valor em dBm.
-   - Limite mínimo de valor em dBm (deve ser menor que o limite máximo).
-   - Nome do arquivo de entrada.
-   - Nome do arquivo de saída.
+1. Extrair um intervalo de linhas de dados com base em limites de potência de sinal especificados pelo usuário. Por exemplo, pode ser usado para extrair todas as linhas com potência de sinal entre -26 dBm e -39 dBm.
 
-3. O script aplicará os filtros especificados no arquivo de entrada e salvará o resultado no arquivo de saída.
+2. Extrair todas as linhas de dados com potência de sinal igual a -40 dBm.
 
-4. O usuário pode optar por extrair linhas com um valor específico de -40 dBm quando solicitado.
+O script faz parte do Projeto VORTEX e foi desenvolvido com portabilidade em mente, permitindo sua incorporação em outros scripts ou sistemas automatizados.
 
-## Funções
-### `color_message(color, message)`
-Esta função é usada para exibir mensagens coloridas no terminal.
+## Modo de Uso
 
-- `color` (string): A cor da mensagem, que pode ser "red" (vermelho), "green" (verde), "blue" (azul), "yellow" (amarelo) ou qualquer outra cor.
-- `message` (string): A mensagem a ser exibida.
+### Uso Interativo
 
-### Fluxo Principal
-O script segue o seguinte fluxo principal:
+Ao ser executado sem argumentos, o script entrará no modo interativo, onde solicitará ao usuário as seguintes informações:
 
-1. Solicita informações ao usuário, incluindo limites de dBm e nomes de arquivos de entrada e saída.
+- Limite máximo de potência de sinal (dBm).
+- Limite mínimo de potência de sinal (dBm).
+- Nome do arquivo de entrada.
+- Nome do arquivo de saída.
 
-2. Aplica filtros com AWK para extrair linhas que atendem aos critérios especificados (maior ou igual ao limite máximo e menor ou igual ao limite mínimo).
+### Uso com Argumentos
 
-3. Remove linhas vazias do arquivo de saída com SED.
+O script também pode ser executado com argumentos de linha de comando, o que é útil para automatizar tarefas. Os argumentos disponíveis são:
 
-4. Verifica se o arquivo de saída foi criado com sucesso.
+- `-t <valor>`: Especifica o limite máximo de potência de sinal (dBm).
+- `-p <valor>`: Especifica o limite mínimo de potência de sinal (dBm).
+- `-i <arquivo>`: Especifica o nome do arquivo de entrada.
+- `-o <arquivo>`: Especifica o nome do arquivo de saída.
 
-5. Opcionalmente, permite que o usuário extraia linhas com um valor específico de -40 dBm.
+Exemplo de uso com argumentos:
 
-6. Exibe mensagens de conclusão e informações sobre o resultado.
-
-## Correções
-As seguintes correções foram feitas no código:
-
-- Correção do operador de comparação na extração de valores de -40 dBm de `=` para `==`.
-- Verificação de resposta para aceitar tanto "n" quanto "N".
-- Remoção da linha `i =`, que não estava sendo usada.
-
-## Testes
-É importante testar o script com diferentes casos de entrada para garantir que ele funcione conforme o esperado e que as correções tenham sido aplicadas corretamente.
-
----
+```bash
+bash obsidian.sh -t -26 -p -39 -i input.txt -o output.txt
