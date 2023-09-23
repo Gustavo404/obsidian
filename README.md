@@ -50,5 +50,3 @@ O script utiliza as seguintes etapas para processar os dados:
 
 ## Conclusão
 O script Obsidian é uma ferramenta poderosa para processar dados de análise de potência de sinal em dBm. Ele pode ser usado interativamente ou incorporado em fluxos de trabalho automatizados, fornecendo flexibilidade e eficiência.
-
-arduino
