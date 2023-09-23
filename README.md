@@ -15,6 +15,32 @@ O script Obsidian é uma ferramenta versátil projetada para processar dados de 
 
 O script faz parte do Projeto VORTEX e foi desenvolvido com portabilidade em mente, permitindo sua incorporação em outros scripts ou sistemas automatizados.
 
+
+
+
+## Dependências
+O script Obsidian depende de algumas ferramentas comuns de linha de comando para funcionar corretamente. Certifique-se de que essas dependências estejam instaladas no seu sistema antes de executar o script:
+
+- AWK: O AWK é uma linguagem de programação de texto usada para processar e manipular dados em formato de texto. A maioria dos sistemas Unix e Linux já possui o AWK instalado por padrão.
+- SED: O SED (Stream Editor) é uma ferramenta poderosa para manipular texto em fluxos de dados. Ele também é amplamente utilizado e geralmente está disponível em sistemas Unix e Linux.
+- Bash: O Bash é o interpretador de shell padrão na maioria dos sistemas Unix e Linux. Certifique-se de que o Bash esteja instalado e seja a shell padrão no seu sistema.
+
+## Instalação
+O script Obsidian não requer uma instalação formal, pois é um script de shell autossuficiente. Você pode copiar o código-fonte diretamente para o seu sistema e executá-lo. Aqui estão os passos simples para usar o script:
+
+1. Baixe o script Obsidian a partir da fonte desejada, ou copie-o para o seu sistema a partir de onde ele está armazenado.
+```exemplo usando o github
+apt install git -y
+git clone https://github.com/Gustavo404/obsidian
+```
+
+2. Certifique-se de que o script tenha permissões de execução. Você pode usar o comando chmod +x obsidian.sh para conceder permissões de execução ao script.
+
+3. Execute o script usando o Bash. Você pode usar o seguinte comando para executar o script em modo interativo:
+
+
+
+
 ## Modo de Uso
 
 ### Uso Interativo
