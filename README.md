@@ -1,4 +1,4 @@
-# Documentação Técnica do Script Obsidian
+# Obsidian
 
 ## Visão Geral
 
