@@ -1,4 +1,4 @@
-# Obsidian
+# Documentação Técnica do Script Obsidian
 
 ## Visão Geral
 
@@ -34,3 +34,21 @@ Exemplo de uso com argumentos:
 
 ```bash
 bash obsidian.sh -t -26 -p -39 -i input.txt -o output.txt
+```
+
+## Funções
+O código do script Obsidian contém funções que auxiliam na exibição de mensagens coloridas e informativas para o usuário. Abaixo estão essas funções:
+
+**`color_message()`**: Esta função exibe mensagens coloridas no terminal, facilitando a diferenciação de mensagens de sucesso (verde), erro (vermelho), informações (azul) e avisos (amarelo).
+
+## Processamento de Dados
+O script utiliza as seguintes etapas para processar os dados:
+
+1. Aplica um filtro usando o AWK para extrair linhas de dados com potência de sinal dentro do intervalo especificado pelo usuário.
+2. Aplica um segundo filtro usando o SED para remover linhas vazias do arquivo de saída.
+3. Verifica se o arquivo de saída foi criado com sucesso e fornece mensagens informativas ao usuário.
+
+## Conclusão
+O script Obsidian é uma ferramenta poderosa para processar dados de análise de potência de sinal em dBm. Ele pode ser usado interativamente ou incorporado em fluxos de trabalho automatizados, fornecendo flexibilidade e eficiência.
+
+arduino
