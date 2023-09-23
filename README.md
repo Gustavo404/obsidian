@@ -81,11 +81,11 @@ O script utiliza as seguintes etapas para processar os dados:
 
 ## Feedback, Perguntas e Relatórios de Problemas
 
-Se quiser contribuir para a melhoria do projeto 'magma', sugestões, perguntas ou encontrar algum problema, estou aqui para ajudar.
+Se quiser contribuir para a melhoria do projeto 'Obsidian', sugestões, perguntas ou encontrar algum problema, estou aqui para ajudar.
 
 ### Sugestões e Melhorias
 
-Se você tiver sugestões ou ideias para melhorar o projeto 'magma', sinta-se à vontade para compartilhá-las. Você pode fazer isso das seguintes maneiras:
+Se você tiver sugestões ou ideias para melhorar o projeto 'Obsidian', sinta-se à vontade para compartilhá-las. Você pode fazer isso das seguintes maneiras:
 
 - **Pull Request (PR)**: Se você deseja contribuir diretamente com código, abra um Pull Request com suas alterações propostas. Analisaremos suas contribuições e trabalharemos juntos para incorporá-las ao projeto.
 
@@ -93,7 +93,7 @@ Se você tiver sugestões ou ideias para melhorar o projeto 'magma', sinta-se à
 
 ### Relatórios de Problemas (Bugs)
 
-Encontrou um bug ou problema em 'magma'? Você pode relatar problemas das seguintes maneiras:
+Encontrou um bug ou problema em 'Obsidian'? Você pode relatar problemas das seguintes maneiras:
 
 - **Issues**: Abra uma Issue descrevendo o problema. Inclua informações relevantes, como o ambiente em que o erro ocorreu, etapas para reproduzi-lo e qualquer mensagem de erro que tenha recebido.
 
@@ -101,7 +101,7 @@ Encontrou um bug ou problema em 'magma'? Você pode relatar problemas das seguin
 
 ### Perguntas e Suporte
 
-Se você tiver alguma pergunta sobre como usar 'magma' ou precisar de suporte, Você pode fazer o seguinte:
+Se você tiver alguma pergunta sobre como usar 'Obsidian' ou precisar de suporte, Você pode fazer o seguinte:
 
 - **Issues Existentes**: Verifique se já existe uma Issue relacionada à sua pergunta. Talvez a resposta que você procura já esteja lá.
 
@@ -109,9 +109,9 @@ Se você tiver alguma pergunta sobre como usar 'magma' ou precisar de suporte, V
 
 - **Contato pelo Site**: Você também pode entrar em contato conosco através do site [gustavo404.com/sobre](https://www.gustavo404.com/sobre). Utilize os meios de contato para enviar suas perguntas ou dúvidas.
 
-Agradeço por sua contribuição, feedback e envolvimento na comunidade do projeto 'magma'.
+Agradeço por sua contribuição, feedback e envolvimento na comunidade do projeto 'Obsidian'.
 
 
 ## Licença
 
-O código-fonte do projeto 'magma' é disponibilizado sob os termos da Licença Pública Geral GNU versão 2.0 (GPL 2.0). Isso significa que você é livre para usar, modificar e distribuir o código de acordo com os termos da GPL 2.0. Certifique-se de ler e entender os detalhes da licença antes de utilizar o projeto.e
+O código-fonte do projeto 'Obsidian' é disponibilizado sob os termos da Licença Pública Geral GNU versão 2.0 (GPL 2.0). Isso significa que você é livre para usar, modificar e distribuir o código de acordo com os termos da GPL 2.0. Certifique-se de ler e entender os detalhes da licença antes de utilizar o projeto.e
