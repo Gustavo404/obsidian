@@ -91,8 +91,8 @@ fi
 
 color_message "blue" "[!] Efetuando alterações!"
 # Aplicando o filtro com AWK usando o limite especificado
-awk -v teto="$teto_dBm" -F'\t' '$2 >= teto' "$input" > .tmp
-awk -v piso="$piso_dBm" -F'\t' '$2 <= piso' .tmp > "$output"
+awk -v teto="$teto_dBm" -F'\t' '$3 >= teto' "$input" > .tmp
+awk -v piso="$piso_dBm" -F'\t' '$3 <= piso' .tmp > "$output"
 
 # Aplicando o filtro com SED para remover linhas vazias
 sed -i '/^$/d' "$output"
@@ -107,13 +107,13 @@ if [ -e "$output" ]; then
 fi
 
 # Extrair clientes com sinal igual a -40 dBm
-read -p "[?] Deseja copiar os clientes com sinal igual a -40 dBm de $input para 40dBm_$input.txt? (Y/n)" response
+read -p "[?] Deseja copiar os clientes com sinal igual a -40 e 0.00 dBm, e com erro de $input para 40dBm_$input.txt? (Y/n)" response
 if [ "$response" = "n" ] || [ "$response" = "N" ]; then
   color_message "yellow" "[!] Processo finalizado."
   sleep 0.5
   else
   color_message "blue" "[.] Prosseguindo..."
-  awk -F'\t' '$2 == -40' "$input" > 40dBm_$input.txt
+  grep '\(-40\|RECV POWER\|(Dbm)\|\[ ERR\|onu\)' "$input" > 40dbm_$input
 fi
 
 # Mensagem de conclusão
