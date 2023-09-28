@@ -18,8 +18,7 @@ O script Obsidian é uma ferramenta versátil projetada para processar dados de 
 
 O script faz parte do Projeto VORTEX e foi desenvolvido com portabilidade em mente, permitindo sua incorporação em outros scripts ou sistemas automatizados.
 
-
-
+<br>
 
 ## Dependências
 O script Obsidian depende de algumas ferramentas comuns de linha de comando para funcionar corretamente. Certifique-se de que essas dependências estejam instaladas no seu sistema antes de executar o script:
@@ -27,6 +26,8 @@ O script Obsidian depende de algumas ferramentas comuns de linha de comando para
 - AWK: O AWK é uma linguagem de programação de texto usada para processar e manipular dados em formato de texto. A maioria dos sistemas Unix e Linux já possui o AWK instalado por padrão.
 - SED: O SED (Stream Editor) é uma ferramenta poderosa para manipular texto em fluxos de dados. Ele também é amplamente utilizado e geralmente está disponível em sistemas Unix e Linux.
 - Bash: O Bash é o interpretador de shell padrão na maioria dos sistemas Unix e Linux. Certifique-se de que o Bash esteja instalado e seja a shell padrão no seu sistema.
+
+<br>
 
 ## Instalação
 O script Obsidian não requer uma instalação formal, pois é um script de shell autossuficiente. Você pode copiar o código-fonte diretamente para o seu sistema e executá-lo. Aqui estão os passos simples para usar o script:
@@ -41,8 +42,7 @@ git clone https://github.com/Gustavo404/obsidian
 
 3. Execute o script usando o Bash. Você pode usar o seguinte comando para executar o script em modo interativo:
 
-
-
+<br>
 
 ## Modo de Uso
 
@@ -70,10 +70,14 @@ Exemplo de uso com argumentos:
 bash obsidian.sh -t -26 -p -39 -i input.txt -o output.txt
 ```
 
+<br>
+
 ## Funções
 O código do script Obsidian contém funções que auxiliam na exibição de mensagens coloridas e informativas para o usuário. Abaixo estão essas funções:
 
 **`color_message()`**: Esta função exibe mensagens coloridas no terminal, facilitando a diferenciação de mensagens de sucesso (verde), erro (vermelho), informações (azul) e avisos (amarelo).
+
+<br>
 
 ## Processamento de Dados
 O script utiliza as seguintes etapas para processar os dados:
@@ -81,6 +85,8 @@ O script utiliza as seguintes etapas para processar os dados:
 1. Aplica um filtro usando o AWK para extrair linhas de dados com potência de sinal dentro do intervalo especificado pelo usuário.
 2. Aplica um segundo filtro usando o SED para remover linhas vazias do arquivo de saída.
 3. Verifica se o arquivo de saída foi criado com sucesso e fornece mensagens informativas ao usuário.
+
+<br>
 
 ## Feedback, Perguntas e Relatórios de Problemas
 
@@ -114,6 +120,7 @@ Se você tiver alguma pergunta sobre como usar Obsidian ou precisar de suporte, 
 
 Agradeço por sua contribuição, feedback e envolvimento na comunidade do projeto Obsidian.
 
+<br>
 
 ## Licença
 
