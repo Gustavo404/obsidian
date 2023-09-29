@@ -23,8 +23,6 @@ function color_message() {
   esac
 }
 
-# ...
-
 # Diálogo de boas-vindas
 # Verifica se foram fornecidos argumentos de linha de comando
 if [ $# -eq 0 ]; then
@@ -87,8 +85,6 @@ else
   fi
 fi
 
-# ...
-
 color_message "blue" "[!] Efetuando alterações!"
 # Aplicando o filtro com AWK usando o limite especificado
 awk -v teto="$teto_dBm" -F'\t' '$3 >= teto' "$input" > .tmp
@@ -102,7 +98,7 @@ sleep 0.5
 if [ -e "$output" ]; then
   color_message "green" "[!] O arquivo $output criado com sucesso!"
   rm .tmp
-  else
+else
   color_message "red" "[!] Houve um erro ao criar o arquivo $output, verifique obsidian/.tmp"
 fi
 
@@ -111,7 +107,7 @@ read -p "[?] Deseja copiar os clientes com sinal igual a -40 e 0.00 dBm, e com e
 if [ "$response" = "n" ] || [ "$response" = "N" ]; then
   color_message "yellow" "[!] Processo finalizado."
   sleep 0.5
-  else
+else
   color_message "blue" "[.] Prosseguindo..."
   grep '\(-40\|RECV POWER\|(Dbm)\|\[ ERR\|onu\)' "$input" > 40dbm_$input
 fi
