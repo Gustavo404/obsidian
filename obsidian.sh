@@ -68,11 +68,11 @@ else
         output="$OPTARG"
         ;;
       \?)
-        echo "Opção inválida: -$OPTARG" >&2
+        color_message "red" "Opção inválida: -$OPTARG"
         exit 1
         ;;
       :)
-        echo "A opção -$OPTARG requer um argumento." >&2
+        color_message "red" "A opção -$OPTARG requer um argumento."
         exit 1
         ;;
     esac
@@ -85,7 +85,24 @@ else
   fi
 fi
 
-color_message "blue" "[!] Efetuando alterações!"
+# Verifica se o limite máximo é um número válido
+if ! [[ "$teto_dBm" =~ ^-?[0-9]+$ ]]; then
+  color_message "red" "O limite máximo '$teto_dBm' não é um número válido."
+  exit 1
+fi
+
+# Verifica se o limite mínimo é um número válido
+if ! [[ "$piso_dBm" =~ ^-?[0-9]+$ ]]; then
+  color_message "red" "O limite mínimo '$piso_dBm' não é um número válido."
+  exit 1
+fi
+
+# Verifica se o arquivo de entrada existe
+if [ ! -f "$input" ]; then
+  color_message "red" "O arquivo de entrada '$input' não existe."
+  exit 1
+fi
+
 # Aplicando o filtro com AWK usando o limite especificado
 awk -v teto="$teto_dBm" -F'\t' '$3 >= teto' "$input" > .tmp
 awk -v piso="$piso_dBm" -F'\t' '$3 <= piso' .tmp > "$output"
@@ -124,5 +141,5 @@ if [[ -e "$output" ]]; then
 else
   color_message "red" "\n-----------------------------"
   color_message "red" "[!] Ocorreu um erro!"
-  exit 
+  exit 1
 fi
