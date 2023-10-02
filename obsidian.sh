@@ -112,7 +112,7 @@ function verificar_arquivo_saida() {
 
 # Função para extrair clientes com sinal igual a -40 dBm
 function extrair_clientes_40dbm() {
-  read -p "[?] Deseja copiar os clientes com sinal igual a -40 e 0.00 dBm, e com erro de $input para 40dBm_$input.txt? (Y/n)" response
+  read -p "[?] Deseja copiar os clientes com sinal igual a -40 e 0.00 dBm, e com erro de $input para 40dBm_$input? (Y/n)" response
   if [ "$response" = "n" ] || [ "$response" = "N" ]; then
     color_message "yellow" "[!] Processo finalizado."
     sleep 0.5
