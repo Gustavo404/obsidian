@@ -34,11 +34,11 @@ function solicitar_parametros() {
   read piso_dBm
 
   # Solicita o nome do arquivo de entrada
-  color_message "yellow" "[...] Agora, insira o nome do arquivo de entrada:"
+  color_message "yellow" "\n[...] Agora, insira o nome do arquivo de entrada:"
   read input
 
   # Solicita o nome do arquivo de saída
-  color_message "yellow" "[...] Insira o nome do arquivo de saída:"
+  color_message "yellow" "\n[...] Insira o nome do arquivo de saída:"
   read output
 }
 
@@ -143,7 +143,7 @@ function exibir_mensagem_conclusao() {
 if [ $# -eq 0 ]; then
   clear
   color_message "green" "Bem-vindo ao Obsidian"
-  echo -e "Este script irá filtrar as linhas com valores de dBm inferiores ao limite especificado."
+  echo -e "Este script irá filtrar os valores de dBm no intervalo especificado."
   echo -e "exemplos de valores:    maximo: -26    minimo: -39"
   solicitar_parametros
 else
