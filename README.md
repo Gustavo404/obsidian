@@ -20,108 +20,113 @@ O script faz parte do Projeto VORTEX e foi desenvolvido com portabilidade em men
 
 <br>
 
-## Dependências
-O script Obsidian depende de algumas ferramentas comuns de linha de comando para funcionar corretamente. Certifique-se de que essas dependências estejam instaladas no seu sistema antes de executar o script:
+## **Uso**
 
-- AWK: O AWK é uma linguagem de programação de texto usada para processar e manipular dados em formato de texto. A maioria dos sistemas Unix e Linux já possui o AWK instalado por padrão.
-- SED: O SED (Stream Editor) é uma ferramenta poderosa para manipular texto em fluxos de dados. Ele também é amplamente utilizado e geralmente está disponível em sistemas Unix e Linux.
-- Bash: O Bash é o interpretador de shell padrão na maioria dos sistemas Unix e Linux. Certifique-se de que o Bash esteja instalado e seja a shell padrão no seu sistema.
+Para usar o script Obsidian, siga os seguintes passos:
 
-<br>
-
-## Instalação
-O script Obsidian não requer uma instalação formal, pois é um script de shell autossuficiente. Você pode copiar o código-fonte diretamente para o seu sistema e executá-lo. Aqui estão os passos simples para usar o script:
-
-1. Baixe o script Obsidian a partir da fonte desejada, ou copie-o para o seu sistema a partir de onde ele está armazenado.
-```exemplo usando o github
-apt install git -y
-git clone https://github.com/Gustavo404/obsidian
-```
-
-2. Certifique-se de que o script tenha permissões de execução. Você pode usar o comando chmod +x obsidian.sh para conceder permissões de execução ao script.
-
-3. Execute o script usando o Bash. Você pode usar o seguinte comando para executar o script em modo interativo:
-
-<br>
-
-## Modo de Uso
-
-### Uso Interativo
-
-Ao ser executado sem argumentos, o script entrará no modo interativo, onde solicitará ao usuário as seguintes informações:
-
-- Limite máximo de potência de sinal (dBm).
-- Limite mínimo de potência de sinal (dBm).
-- Nome do arquivo de entrada.
-- Nome do arquivo de saída.
-
-### Uso com Argumentos
-
-O script também pode ser executado com argumentos de linha de comando, o que é útil para automatizar tarefas. Os argumentos disponíveis são:
-
-- `-t <valor>`: Especifica o limite máximo de potência de sinal (dBm).
-- `-p <valor>`: Especifica o limite mínimo de potência de sinal (dBm).
-- `-i <arquivo>`: Especifica o nome do arquivo de entrada.
-- `-o <arquivo>`: Especifica o nome do arquivo de saída.
-
-Exemplo de uso com argumentos:
-
-```bash
-bash obsidian.sh -t -26 -p -39 -i input.txt -o output.txt
-```
-
-<br>
-
-## Funções
-O código do script Obsidian contém funções que auxiliam na exibição de mensagens coloridas e informativas para o usuário. Abaixo estão essas funções:
-
-**`color_message()`**: Esta função exibe mensagens coloridas no terminal, facilitando a diferenciação de mensagens de sucesso (verde), erro (vermelho), informações (azul) e avisos (amarelo).
-
-<br>
-
-## Processamento de Dados
-O script utiliza as seguintes etapas para processar os dados:
-
-1. Aplica um filtro usando o AWK para extrair linhas de dados com potência de sinal dentro do intervalo especificado pelo usuário.
-2. Aplica um segundo filtro usando o SED para remover linhas vazias do arquivo de saída.
-3. Verifica se o arquivo de saída foi criado com sucesso e fornece mensagens informativas ao usuário.
-
-<br>
-
-## Feedback, Perguntas e Relatórios de Problemas
-
-Se quiser contribuir para a melhoria do projeto Obsidian, sugestões, perguntas ou encontrar algum problema, estou aqui para ajudar.
-
-### Sugestões e Melhorias
-
-Se você tiver sugestões ou ideias para melhorar o projeto Obsidian, sinta-se à vontade para compartilhá-las. Você pode fazer isso das seguintes maneiras:
-
-- **Pull Request (PR)**: Se você deseja contribuir diretamente com código, abra um Pull Request com suas alterações propostas. Analisaremos suas contribuições e trabalharemos juntos para incorporá-las ao projeto.
-
-- **Issues**: Use as Issues para sugerir melhorias ou novos recursos. Descreva detalhadamente sua ideia para que eu possa entender e discutir como implementá-la.
-
-### Relatórios de Problemas (Bugs)
-
-Encontrou um bug ou problema em Obsidian? Você pode relatar problemas das seguintes maneiras:
-
-- **Issues**: Abra uma Issue descrevendo o problema. Inclua informações relevantes, como o ambiente em que o erro ocorreu, etapas para reproduzi-lo e qualquer mensagem de erro que tenha recebido.
-
-- **Site**: Você também pode reportar bugs em [gustavo404.com/sobre](https://www.gustavo404.com/sobre). Use os meios de contato para enviar detalhes sobre o problema encontrado.
-
-### Perguntas e Suporte
-
-Se você tiver alguma pergunta sobre como usar Obsidian ou precisar de suporte, Você pode fazer o seguinte:
-
-- **Issues Existentes**: Verifique se já existe uma Issue relacionada à sua pergunta. Talvez a resposta que você procura já esteja lá.
-
-- **Novas Issues**: Se sua pergunta não estiver coberta nas Issues existentes, sinta-se à vontade para criar uma nova Issue com sua pergunta. Ficarei feliz em responder e ajudar.
-
-- **Contato pelo Site**: Você também pode entrar em contato conosco através do site [gustavo404.com/sobre](https://www.gustavo404.com/sobre). Utilize os meios de contato para enviar suas perguntas ou dúvidas.
-
-Agradeço por sua contribuição, feedback e envolvimento na comunidade do projeto Obsidian.
-
-<br>
-
-## Licença
-
-O código-fonte do projeto Obsidian é disponibilizado sob os termos da Licença Pública Geral GNU versão 2.0 (GPL 2.0). Isso significa que você é livre para usar, modificar e distribuir o código de acordo com os termos da GPL 2.0. Certifique-se de ler e entender os detalhes da licença antes de utilizar o projeto.
+1. **Execução do Script**:
+    
+    Você pode executar o script sem argumentos, o que iniciará um diálogo interativo para coletar as informações necessárias:
+    
+    ```bash
+    bash obsidian.sh
+    ```
+    
+    Alternativamente, você pode fornecer argumentos diretamente na linha de comando, como abaixo:
+    
+    ```bash
+    bash obsidian.sh -t limite_maximo -p limite_minimo -i arquivo_entrada
+    ```
+    
+2. **Solicitação de Parâmetros**:
+    
+    Se você optar por iniciar o diálogo interativo, o script solicitará as seguintes informações:
+    
+    - Limite máximo em dBm.
+    - Limite mínimo em dBm (deve ser inferior ao limite máximo).
+    - Nome do arquivo de entrada contendo os dados a serem filtrados.
+3. **Processamento de Opções**:
+    
+    Se você preferir fornecer os parâmetros diretamente na linha de comando, você pode usar as seguintes opções:
+    
+    - **`t`**: Limite máximo em dBm.
+    - **`p`**: Limite mínimo em dBm.
+    - **`i`**: Nome do arquivo de entrada.
+    
+    Por exemplo:
+    
+    ```bash
+    bash obsidian.sh -t -26 -p -39 -i dados.txt
+    ```
+    
+4. **Verificação de Limites**:
+    
+    O script verifica se os limites de dBm fornecidos são números válidos.
+    
+5. **Verificação do Arquivo de Entrada**:
+    
+    Verifica se o arquivo de entrada especificado existe.
+    
+6. **Aplicação do Filtro com AWK**:
+    
+    O script utiliza o AWK para filtrar os dados do arquivo de entrada com base nos limites de dBm fornecidos.
+    
+7. **Aplicação do Filtro com SED**:
+    
+    Remove linhas vazias do arquivo filtrado.
+    
+8. **Verificação do Arquivo de Saída**:
+    
+    Verifica se o arquivo filtrado foi criado com sucesso.
+    
+9. **Extração de Clientes com Sinal Igual a -40 dBm**:
+    
+    O script permite extrair informações de clientes com sinal igual a -40 dBm e identificar erros no arquivo de entrada.
+    
+10. **Mensagem de Conclusão**:
+    
+    Exibe uma mensagem de conclusão informando se o processo foi bem-sucedido e onde os resultados foram salvos.
+    
+    ## **Funções Principais**
+    
+    O script Obsidian possui as seguintes funções principais:
+    
+    ### **`color_message()`**
+    
+    Esta função é responsável por exibir mensagens coloridas no terminal. Ela aceita dois parâmetros: a cor da mensagem (como "red", "green", "blue" ou "yellow") e o texto da mensagem.
+    
+    ### **`solicitar_parametros()`**
+    
+    Essa função inicia o diálogo interativo com o usuário para coletar informações, como o limite máximo e mínimo em dBm e o nome do arquivo de entrada.
+    
+    ### **`processar_opcoes()`**
+    
+    Esta função processa as opções da linha de comando, permitindo que o usuário forneça os parâmetros diretamente na chamada do script.
+    
+    ### **`verificar_limites()`**
+    
+    Verifica se os limites de dBm fornecidos pelo usuário são números válidos.
+    
+    ### **`verificar_arquivo_entrada()`**
+    
+    Verifica se o arquivo de entrada especificado pelo usuário existe.
+    
+    ### **`aplicar_filtro_awk()`**
+    
+    Esta função aplica o filtro com AWK para filtrar os dados do arquivo de entrada com base nos limites de dBm fornecidos.
+    
+    ### **`aplicar_filtro_sed()`**
+    
+    Remove linhas vazias do arquivo filtrado usando o SED.
+    
+    ### **`verificar_arquivo_saida()`**
+    
+    Verifica se o arquivo filtrado foi criado com sucesso.
+    
+    ### **`extrair_clientes_40dbm()`**
+    
+    Permite extrair informações de clientes com sinal igual a -40 dBm e identificar erros no arquivo de entrada.
+    
+    ### **`exibir_mensagem_conclusao()`**
+    
+    Exibe uma mensagem de conclusão informando se o processo foi bem-sucedido e onde os resultados foram salvos.
